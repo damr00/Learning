@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'print "Success !"'
+        sh "npm install"
       }
     }
   }
