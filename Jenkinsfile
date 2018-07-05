@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'node'
       args '-p root:root'
+      image 'node:6'
     }
     
   }
@@ -10,6 +10,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh 'npm install'
+        echo 'Test'
       }
     }
   }
