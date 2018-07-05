@@ -1,4 +1,5 @@
 pipeline {
+<<<<<<< HEAD
     agent {
         docker {
             image 'node:6-alpine'
@@ -20,4 +21,21 @@ pipeline {
             }
         }
     }
+=======
+  agent {
+    docker {
+      image 'node:6-Alpine'
+      args '-p 3000:3000'
+    }
+    
+  }
+  stages {
+    stage('deploy') {
+      steps {
+        sh 'npm install'
+        echo 'Test'
+      }
+    }
+  }
+>>>>>>> d7d60af5c541c0892628171df13bcf6d69ddcfa9
 }
