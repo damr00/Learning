@@ -1,14 +1,15 @@
 pipeline {
   agent {
-    node {
-      label '8'
+    docker {
+      image 'node'
+      args '-p root:root'
     }
     
   }
   stages {
     stage('deploy') {
       steps {
-        echo 'Test'
+        sh 'npm install'
       }
     }
   }
