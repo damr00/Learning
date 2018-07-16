@@ -1,15 +1,14 @@
 pipeline {
   agent {
     docker {
-      image 'node:8'
       args '-u 5001:5001'
+      image 'node'
     }
 
   }
   stages {
     stage('Build') {
       steps {
-        echo 'Test'
         bat 'D:'
       }
     }
