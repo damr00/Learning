@@ -1,7 +1,9 @@
 pipeline {
   agent {
-    node {
-      label '8'
+    docker {
+      node {
+        label '8'
+      }
     }
 
   }
