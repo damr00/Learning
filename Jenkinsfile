@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label '6'
+      label '6-Alpine'
     }
 
   }
