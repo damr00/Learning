@@ -9,8 +9,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'd:'
         echo 'Test'
+        bat 'D:'
+        bat 'cd D:\\ojetNew1\\OraHub\\cmms_scheduler'
+        bat 'ojet build'
+        bat 'ojet serve'
       }
     }
   }
