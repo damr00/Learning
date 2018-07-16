@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'node:6'
-      args '-u root:root'
+    node {
+      label '6'
     }
 
   }
