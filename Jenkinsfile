@@ -1,16 +1,16 @@
 pipeline {
   agent {
     docker {
-      image 'node:6'
+      image 'node:8'
       args '-u root:root'
     }
-    
+
   }
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
         echo 'Test'
+        bat 'D:'
       }
     }
   }
